@@ -20,11 +20,17 @@ public class UserRegistration {
     public static boolean isValidMobileFormat(String mobileNumber){
         return mobileNumber.matches("[0-9]{2}\s[0-9]{10}");
     }
+
+    //pre-defined password rules
+    public static boolean isValidPassword(String password){
+        return password.matches("[A-Za-z]{8,}");
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Problem using Regular expression");
         System.out.println(isValidFirstName("Swapna"));
         System.out.println(isValidLastName("Patil"));
         System.out.println(isValidEmail("swapnapatil629@gmail.com"));
         System.out.println(isValidMobileFormat("91 7894561202"));
+        System.out.println(isValidPassword("swapnapatil"));
     }
 }
