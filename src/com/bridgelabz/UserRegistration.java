@@ -23,7 +23,7 @@ public class UserRegistration {
 
     //pre-defined password rules
     public static boolean isValidPassword(String password){
-        return password.matches("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
+        return password.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[?@#%^&!]).{8,}$");
     }
 
     public static void main(String[] args) {
@@ -32,6 +32,6 @@ public class UserRegistration {
         System.out.println(isValidLastName("Patil"));
         System.out.println(isValidEmail("swapnapatil629@gmail.com"));
         System.out.println(isValidMobileFormat("91 7894561202"));
-        System.out.println(isValidPassword("Swapna1Patil"));
+        System.out.println(isValidPassword("Swapna1@Patil"));
     }
 }
