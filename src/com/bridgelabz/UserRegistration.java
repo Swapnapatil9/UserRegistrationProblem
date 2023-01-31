@@ -23,7 +23,7 @@ public class UserRegistration {
 
     //pre-defined password rules
     public static boolean isValidPassword(String password){
-        return password.matches("[A-Za-z]{8,}");
+        return password.matches("^(?=.*[A-Z])[a-zA-Z]{8,}$");
     }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Problem using Regular expression");
@@ -31,6 +31,6 @@ public class UserRegistration {
         System.out.println(isValidLastName("Patil"));
         System.out.println(isValidEmail("swapnapatil629@gmail.com"));
         System.out.println(isValidMobileFormat("91 7894561202"));
-        System.out.println(isValidPassword("swapnapatil"));
+        System.out.println(isValidPassword("SwapnaPatil"));
     }
 }
